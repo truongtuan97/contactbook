@@ -1,1 +1,1 @@
-server '34.207.186.199', user: 'ubuntu', roles: %w{web app db}
+server '52.204.156.169', user: 'ubuntu', roles: %w{web app db}

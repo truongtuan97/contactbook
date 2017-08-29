@@ -11,6 +11,8 @@ set :keep_releases, 5
 set :rbenv_type, :user
 # Edit this if you are using MRI Ruby
 #set :rbenv_ruby_version, '2.4.0' 
+set :rbenv_ruby, '2.4.0'
+
 set :user, "ubuntu"
 set :use_sudo, true
 

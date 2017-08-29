@@ -12,6 +12,7 @@ set :rbenv_type, :user
 # Edit this if you are using MRI Ruby
 #set :rbenv_ruby_version, '2.4.0' 
 set :user, "ubuntu"
+set :use_sudo, true
 
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 set :puma_state, "#{shared_path}/tmp/pids/puma.state"

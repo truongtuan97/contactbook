@@ -1,1 +1,1 @@
-server '52.204.156.169', user: 'ubuntu', roles: %w{web app db}
+server 'ubuntu@ec2-52-204-156-169.compute-1.amazonaws.com', user: 'ubuntu', roles: %w{web app db}

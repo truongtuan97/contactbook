@@ -10,7 +10,8 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 set :keep_releases, 5
 set :rbenv_type, :user
 # Edit this if you are using MRI Ruby
-set :rbenv_ruby_version, '2.4.0' 
+#set :rbenv_ruby_version, '2.4.0' 
+set :user, "ubuntu"
 
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 set :puma_state, "#{shared_path}/tmp/pids/puma.state"
@@ -26,3 +27,4 @@ set :puma_workers, 0
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 set :puma_preload_app, false
+set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/ec2-sec-keypair.pem) }

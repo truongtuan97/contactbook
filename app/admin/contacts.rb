@@ -14,7 +14,7 @@ permit_params :name, :address, :city, :phone, :email
 
 	form do |f|
 		f.input :name
-		f.input :address, as: :ckeditor, input_html: { ckeditor: { height: 400 } }
+	  f.input :address, as: :ckeditor, input_html: { ckeditor: { height: 400 } }
 		f.input :city
 		f.input :phone
 		f.input :email

@@ -2,7 +2,7 @@ ActiveAdmin.register Contact do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-# permit_params :list, :of, :attributes, :on, :model
+permit_params :name, :address, :city, :phone, :email
 #
 # or
 #
@@ -12,4 +12,12 @@ ActiveAdmin.register Contact do
 #   permitted
 # end
 
+	form do |f|
+		f.input :name
+		f.input :address, as: :ckeditor, input_html: { ckeditor: { height: 400 } }
+		f.input :city
+		f.input :phone
+		f.input :email
+		actions
+	end
 end

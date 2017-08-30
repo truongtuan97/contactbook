@@ -13,5 +13,7 @@ module Contactbook
     # -- all .rb files in that directory are automatically loaded.
 
     config.autoload_paths += %w(#{config.root}/app/models/ckeditor)
+
+    ENV['PATH'] = "/usr/local/bin:#{ENV['PATH']}"
   end
 end
